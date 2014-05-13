@@ -2894,18 +2894,6 @@ var items = [{
   ]
 
 
-//      keeps causing illegal syntax error(
-//
-// items.forEach(function(item){
-//  item.Images.forEach(function(image){
-//  $('.container').append('<div style="background: #' + image.hex_code + '" ; class="box">')
-//  })
-// });
-//
-//     )
- 
-
-
 var firstPart = '<div style="background: url(';
 var lastPart = ') " class="box"></div>' 
  
@@ -2913,18 +2901,11 @@ var lastPart = ') " class="box"></div>'
  
 items.forEach(function(item){
   item.Images.forEach(function(image){
-    var totalString = firstPart + image.url_170x135 + lastPart
+    var totalString = firstPart + image.url_570xN + lastPart
     $('.container').append(totalString)
   })
 })
 
-
-items.forEach(function(item){
-  item.Images.forEach(function(image){
-    var totalString = '<div style="background-image: url(' + image.url + ') " class="box"></div>';
-    $('.photoContainer').append(totalString)
-  })
-})
 
 
 
